@@ -16,6 +16,11 @@ void DIO_InitPortDirection(uint8_t PortName,uint8_t PortDirection,uint8_t PortMa
 	//check the required port, specified bits and direction on the Data Direction Register
 	switch(PortName)
 	{
+		case PA:
+		{
+			WRITE_REG(DDRB,PortDirection,PortMask);
+		}
+		break;
 		case PB:
 		{
 			WRITE_REG(DDRB,PortDirection,PortMask);
@@ -39,6 +44,11 @@ void DIO_WritePort(uint8_t PortName,uint8_t PortData,uint8_t PortMask)
 	//check the required port, specified bits and value on the Port Data Register
 	switch(PortName)
 	{
+		case PA:
+		{
+			WRITE_REG(PORTB,PortData,PortMask);
+		}
+		break;
 		case PB:
 		{
 			WRITE_REG(PORTB,PortData,PortMask);
@@ -62,6 +72,11 @@ uint8_t DIO_ReadPort(uint8_t PortName,uint8_t PortMAsk)
 	uint8_t Data;
 	switch(PortName)
 	{
+		case PA:
+		{
+			Data = READ_REG(PINB,PortMAsk);
+		}
+		break;
 		case PB:
 		{
 			Data = READ_REG(PINB,PortMAsk);
