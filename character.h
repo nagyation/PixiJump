@@ -7,7 +7,7 @@
 
 struct struct_character{
     
-    char shape;
+    unsigned char shape;
     
 };
 
