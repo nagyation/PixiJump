@@ -16,6 +16,7 @@ struct struct_game{
     struct struct_character map[MAP_ROWS][MAP_COLS];
     char monsters_number;
     char game_state;
+    int score;
 };
 
 

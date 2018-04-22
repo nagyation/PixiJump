@@ -35,7 +35,7 @@ void LCD_init();  // initialize LCD
 
 void LCD_gotoxy(uint8_t x, uint8_t y);
 
-void LCD_display_string(char* str);	// print strings
+void LCD_display_string(unsigned char* str);	// print strings
 
 void LCD_clear_display();	
 
