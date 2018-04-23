@@ -7,6 +7,7 @@
 #define GAME_RUN 1
 #define GAME_START 2
 #define GAME_ENDED 3
+#define GAME_WON 4
 
 #define MAP_COLS 16
 #define MAP_ROWS 2
@@ -19,6 +20,7 @@ struct struct_game{
     char game_state;
     int score;
     int step;
+    char hero_loc;
 };
 
 void init_map(struct struct_game *game);

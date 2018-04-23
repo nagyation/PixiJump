@@ -12,5 +12,7 @@ void init_map(struct struct_game *game)
 }
 void add_character(struct struct_game *game, char character, char x, char y)
 {
+	if(character == MONSTER)
+		game->monsters_number +=1;
     game->map[x][y].shape = character;
 }

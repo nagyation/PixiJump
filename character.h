@@ -1,9 +1,9 @@
 #ifndef __CHARACTER__
 #define __CHARACTER__
 
-#define MONSTER 0B11110111
-#define HERO 0B10111011
-#define EMPTY 0
+#define MONSTER 0x3C	
+#define HERO 	0x3E
+#define EMPTY 	' '
 
 struct struct_character{
     

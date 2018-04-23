@@ -15,7 +15,7 @@
 #ifndef _LCD_H_
 #define _LCD_H_ 
 
-#define F_CPU 1000000  
+#define F_CPU 8000000  
 
 
 #include <avr/io.h>
@@ -24,7 +24,7 @@
 #include <stdio.h>
 
 
-#define LCD_PORT  PB
+#define LCD_PORT  PD
 #define LCD_RS    0		// register select
 #define LCD_RW    1		// read/write pin
 #define LCD_EN    2		// enable pin 
@@ -35,7 +35,9 @@ void LCD_init();  // initialize LCD
 
 void LCD_gotoxy(uint8_t x, uint8_t y);
 
-void LCD_display_string(unsigned char* str);	// print strings
+void LCD_write_char(uint8_t character);
+
+void LCD_display_string( char* str);	// print strings
 
 void LCD_clear_display();	
 

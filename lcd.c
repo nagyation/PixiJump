@@ -76,7 +76,7 @@ void LCD_gotoxy(uint8_t x, uint8_t y){
 // this functions sends character by character for the LCD to display
 // it terminates when it reaches a NULL character which means that
 // the string has ended
-void LCD_display_string(char* str){
+void LCD_display_string( char* str){
 	uint8_t  i = 0;
 	while(str[i]!=0){
 		LCD_write_char(str[i]);

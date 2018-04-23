@@ -16,7 +16,7 @@
 #define INPUT	0x00
 
 
-#define PA 0x01
+#define PA 0x00
 #define PB 0x01
 #define PC 0x02
 #define PD 0x03

@@ -18,7 +18,7 @@ void DIO_InitPortDirection(uint8_t PortName,uint8_t PortDirection,uint8_t PortMa
 	{
 		case PA:
 		{
-			WRITE_REG(DDRB,PortDirection,PortMask);
+			WRITE_REG(DDRA,PortDirection,PortMask);
 		}
 		break;
 		case PB:
@@ -46,7 +46,7 @@ void DIO_WritePort(uint8_t PortName,uint8_t PortData,uint8_t PortMask)
 	{
 		case PA:
 		{
-			WRITE_REG(PORTB,PortData,PortMask);
+			WRITE_REG(PORTA,PortData,PortMask);
 		}
 		break;
 		case PB:
@@ -74,7 +74,7 @@ uint8_t DIO_ReadPort(uint8_t PortName,uint8_t PortMAsk)
 	{
 		case PA:
 		{
-			Data = READ_REG(PINB,PortMAsk);
+			Data = READ_REG(PINA,PortMAsk);
 		}
 		break;
 		case PB:
