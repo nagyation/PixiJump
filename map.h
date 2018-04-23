@@ -11,6 +11,8 @@
 #define MAP_COLS 16
 #define MAP_ROWS 2
 
+void init_map(struct struct_game);
+void add_character(struct struct_game, char x, char y);
 
 
 struct struct_game{
@@ -21,6 +23,7 @@ struct struct_game{
     int score;
     int step;
 };
+
 
 
 
